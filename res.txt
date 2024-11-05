@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delicious Bites - Menu</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            background: url('images/background.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #333;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-bottom: 2px solid #e67e22;
+            /* Orange */
+        }
+
+        .logo h1 {
+            margin: 0;
+            color: #e67e22;
+            /* Orange */
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        nav ul li a:hover {
+            color: #e67e22;
+            /* Orange */
+        }
+
+        /* Menu Section */
+        .menu {
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+        }
+
+        .menu-section {
+            margin-bottom: 40px;
+        }
+
+        .menu-section h3 {
+            margin-bottom: 20px;
+            color: #e67e22;
+            /* Orange */
+        }
+
+        .menu-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .menu-item {
+            background: #f9f9f9;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            width: calc(33% - 20px);
+            /* Three items per row */
+            padding: 10px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .menu-item:hover {
+            transform: scale(1.05);
+        }
+
+        .menu-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .menu-item h4 {
+            margin: 10px 0;
+            color: #333;
+        }
+
+        .menu-item p {
+            margin: 10px 0;
+            color: #777;
+        }
+
+        .menu-item span {
+            font-weight: bold;
+            color: #e67e22;
+            /* Price Color */
+        }
+
+        .order-btn {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #e67e22;
+            /* Orange */
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .order-btn:hover {
+            background-color: #d35400;
+            /* Darker Orange */
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #f9f9f9;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            border-top: 2px solid #e67e22;
+            /* Orange */
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <h1>Delicious Bites</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="location.html">Location</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Menu Section -->
+    <section id="menu" class="menu">
+        <h2>Our Menu</h2>
+
+        <!-- Veg Items -->
+        <div class="menu-section">
+            <h3>Veg Items</h3>
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <img src="images/paneer-butter-masala.jpg" alt="Paneer Butter Masala">
+                    <h4>Paneer Butter Masala</h4>
+                    <p>Creamy paneer cooked in a buttery tomato-based sauce.</p>
+                    <span>₹450</span>
+                    <a href="order.html?item=Paneer%20Butter%20Masala" class="order-btn">Order Now</a>
+                </div>
+                <div class="menu-item">
+                    <img src="images/veg-biryani.jpg" alt="Vegetable Biryani">
+                    <h4>Vegetable Biryani</h4>
+                    <p>Fragrant basmati rice cooked with fresh vegetables and spices.</p>
+                    <span>₹350</span>
+                    <a href="order.html?item=Vegetable%20Biryani" class="order-btn">Order Now</a>
+                </div>
+                <div class="menu-item">
+                    <img src="images/samosa.jpg" alt="Samosa">
+                    <h4>Samosa</h4>
+                    <p>Spiced potatoes and peas wrapped in crispy pastry.</p>
+                    <span>₹100</span>
+                    <a href="order.html?item=Samosa" class="order-btn">Order Now</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Non-Veg Items -->
+        <div class="menu-section">
+            <h3>Non-Veg Items</h3>
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <img src="images/chicken-biryani.jpg" alt="Chicken Biryani">
+                    <h4>Chicken Biryani</h4>
+                    <p>Spicy chicken cooked with fragrant basmati rice.</p>
+                    <span>₹500</span>
+                    <a href="order.html?item=Chicken%20Biryani" class="order-btn">Order Now</a>
+                </div>
+                <div class="menu-item">
+                    <img src="images/butter-chicken.jpg" alt="Butter Chicken">
+                    <h4>Butter Chicken</h4>
+                    <p>Marinated chicken in a rich tomato and butter gravy.</p>
+                    <span>₹550</span>
+                    <a href="order.html?item=Butter%20Chicken" class="order-btn">Order Now</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Snacks -->
+        <div class="menu-section">
+            <h3>Snacks</h3>
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <img src="images/paneer-tikka.jpg" alt="Paneer Tikka">
+                    <h4>Paneer Tikka</h4>
+                    <p>Grilled paneer marinated in spices.</p>
+                    <span>₹250</span>
+                    <a href="order.html?item=Paneer%20Tikka" class="order-btn">Order Now</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Ice Creams -->
+        <div class="menu-section">
+            <h3>Ice Creams</h3>
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <img src="images/ice-cream.jpg" alt="Ice Cream">
+                    <h4>Vanilla Ice Cream</h4>
+                    <p>Rich and creamy vanilla ice cream.</p>
+                    <span>₹150</span>
+                    <a href="order.html?item=Vanilla%20Ice%20Cream" class="order-btn">Order Now</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Drinks -->
+        <div class="menu-section">
+            <h3>Drinks</h3>
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <img src="images/lassi.jpg" alt="Lassi">
+                    <h4>Mango Lassi</h4>
+                    <p>Creamy yogurt drink with mango.</p>
+                    <span>₹120</span>
+                    <a href="order.html?item=Mango%20Lassi" class="order-btn">Order Now</a>
+                </div>
+                <div class="menu-item">
+                    <img src="images/cold-drink.jpg" alt="Cold Drink">
+                    <h4>Cold Drink</h4>
+                    <p>Refreshing soft drink to quench your thirst.</p>
+                    <span>₹80</span>
+                    <a href="order.html?item=Cold%20Drink" class="order-btn">Order Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Delicious Bites | Designed with love
+
+            <
